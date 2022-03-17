@@ -1,0 +1,10 @@
+body {
+   height: 100%;
+    margin: 0px;
+   }
+
+
+.login-wrapper{
+  margin: 10rem auto;
+  width: 20rem;
+}
