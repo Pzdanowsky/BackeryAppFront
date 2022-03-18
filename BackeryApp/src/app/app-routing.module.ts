@@ -1,3 +1,5 @@
+import { WorkersComponent } from './workers-domain/workers/workers.component';
+import { ContractorsComponent } from './contractors-domain/contractors/contractors.component';
 import { OrdersComponent } from './order-domain/orders/orders.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgModule } from '@angular/core';
@@ -12,8 +14,8 @@ const routes: Routes = [
 {path: 'dashboard', component: DashboardComponent,
 children: [
 {path: 'orders', component: OrdersComponent},
-
-
+{path: 'contractors', component: ContractorsComponent},
+{path: 'workers', component: WorkersComponent}
 ]
 }
 
@@ -24,4 +26,9 @@ children: [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [LoginComponent, DashboardComponent, OrdersComponent]
+export const routingComponents =
+[LoginComponent,
+   DashboardComponent,
+    OrdersComponent,
+  ContractorsComponent,
+WorkersComponent]
