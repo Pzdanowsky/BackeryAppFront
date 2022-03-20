@@ -11,16 +11,15 @@ import { Component, OnInit } from '@angular/core';
 export class OrdersComponent implements OnInit {
 
   columnsName = ['Nr. zamowienia','Data zamowienia','Data realizacji','Kontrahent','Wartość','Status'];
-
   index = ['order_id','order_date','order_ondate','contractor','ammountPaid','status'];
 
   orderList : Orders[] = [];
-
   contractorSearchName: any;
+  date_start!: Date;
+  key = 'id';
+  reverse: boolean = false;
 
-  constructor(private restApi: RestService) {
-
-  }
+  constructor(private restApi: RestService) {}
 
   ngOnInit(): void {
     this.restApi.getOrders().subscribe
@@ -34,25 +33,31 @@ export class OrdersComponent implements OnInit {
         console.log("Error load orders");
       }
     )
-
   }
 
   searchContractor(){
-if(this.contractorSearchName ==""){
-  this.ngOnInit();
-}else{
-  this.orderList = this.orderList.filter(res =>{
-    return res.contractor.toLocaleLowerCase().match(this.contractorSearchName.toLocaleLowerCase());
-  })
-}
+    if(this.contractorSearchName ==""){
+      this.ngOnInit();
+    }else{
+      this.orderList = this.orderList.filter(res =>{
+      return res.contractor.toLocaleLowerCase().match(this.contractorSearchName.toLocaleLowerCase());
+    })
+    }
   }
 
-key = 'id';
-reverse: boolean = false;
+  searchStartDate(){
+
+    this.orderList = this.orderList.filter(res=>{
+      let temp = new Date(res.order_date)
+      let start = new Date(this.date_start)
+      return temp.getTime() >= start.getTime();
+    })
+  }
+
 
   sortBy(key: string){
-  this.key = key;
-  this.reverse = !this.reverse;
+    this.key = key;
+    this.reverse = !this.reverse;
   }
 
 
