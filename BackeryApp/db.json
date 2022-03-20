@@ -1,0 +1,31 @@
+
+{
+  "Orders":[
+    {
+      "order_id": "1",
+      "order_date": "17-03-2022",
+      "order_ondate": "18-03-2022",
+      "contractor" : "SKLEP 1",
+      "ammountPaid" : "123,23",
+      "status" : "Produkcja"
+    },
+    {
+      "order_id": "2",
+      "order_date": "17-03-2022",
+      "order_ondate": "18-03-2022",
+      "contractor" : "SKLEP 2",
+      "ammountPaid" : "223,23",
+      "status" : "Produkcja"
+    },
+    {
+      "order_id": "3",
+      "order_date": "17-03-2022",
+      "order_ondate": "18-03-2022",
+      "contractor" : "SKLEP 3",
+      "ammountPaid" : "283,23",
+      "status" : "Produkcja"
+    }
+  ]
+
+
+}

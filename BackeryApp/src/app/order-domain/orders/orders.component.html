@@ -3,7 +3,8 @@
 
   <div class="table-wrapper">
     <div class="features-bar">
-      <input> Szukaj
+      <input class="form-control" type="text" name="contractorSearch" [(ngModel)]="contractorSearchName"  (ngModelChange)="searchContractor()"
+      placeholder="Kontrahent"> Szukaj
 
       <button>DZIŚ</button>
       <button>WCZORAJ</button>
@@ -21,40 +22,23 @@
     </div>
 <table class="table-class">
   <thead>
-
-
     <tr>
-      <th>Nr. zamowienia</th>
-      <th>Data zamowienia</th>
-      <th>Kontrahent</th>
-      <th>Wartość</th>
-      <th>Status</th>
+      <th *ngFor="let column of columnsName" (click)="sortBy('item')">
+        {{column}}<i class="fa fa-sort"></i>
+      </th>
+
     </tr>
   </thead>
-  <tr>
-    <td>1</td>
-    <td>SKLEP 1</td>
-    <td>18-03-2022</td>
-    <td>123.23</td>
-    <td>Produkcja</td>
+  <tr *ngFor="let order of orderList | orderBy: key: reverse">
+    <td>{{order.order_id}}</td>
+    <td>{{order.order_date}}</td>
+    <td>{{order.order_ondate}}</td>
+    <td>{{order.contractor}}</td>
+    <td>{{order.ammountPaid}}</td>
+    <td>{{order.status}}</td>
     <td><button>Szczegóły</button></td>
   </tr>
-  <tr>
-    <td>1</td>
-    <td>SKLEP 1</td>
-    <td>18-03-2022</td>
-    <td>123.23</td>
-    <td>Produkcja</td>
-    <td><button>Szczegóły</button></td>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>SKLEP 1</td>
-    <td>18-03-2022</td>
-    <td>123.23</td>
-    <td>Produkcja</td>
-    <td><button>Szczegóły</button></td>
-  </tr>
+
 
 </table>
 
