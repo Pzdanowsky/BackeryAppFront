@@ -1,0 +1,49 @@
+<div class="orders-container">
+
+
+  <div class="table-wrapper">
+    <div class="features-bar">
+      <input class="form-control" type="text" name="contractorSearch" [(ngModel)]="contractorSearchName"
+       (ngModelChange)="searchContractor()" placeholder="Kontrahent">
+
+      <button>DZIŚ</button>
+      <button>WCZORAJ</button>
+
+      <label for="start">Start date:</label>
+      <input type="date" id="start-date" name="trip-start"
+       value="2022-07-22"
+       min="2022-01-01"
+       [(ngModel)]="date_start"
+        (ngModelChange)="searchStartDate()"
+       >
+
+       <label for="start">Stop date:</label>
+
+<input type="date" id="stop-date" name="trip-stop"
+       value="2021-07-22"
+       min="2022-01-01" >
+    </div>
+<table class="table-class">
+  <thead>
+    <tr>
+      <th *ngFor="let column of columnsName" (click)="sortBy('item')">
+        {{column}}<i class="fa fa-sort"></i>
+      </th>
+
+    </tr>
+  </thead>
+  <tr *ngFor="let order of orderList | orderBy: key: reverse">
+    <td>{{order.order_id}}</td>
+    <td>{{order.order_date}}</td>
+    <td>{{order.order_ondate}}</td>
+    <td>{{order.contractor}}</td>
+    <td>{{order.ammountPaid}}</td>
+    <td>{{order.status}}</td>
+    <td><button>Szczegóły</button></td>
+  </tr>
+
+
+</table>
+
+</div>
+</div>

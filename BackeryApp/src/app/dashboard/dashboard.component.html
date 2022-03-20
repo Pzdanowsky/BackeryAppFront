@@ -1,0 +1,19 @@
+<div class="page-container">
+<div class="navibar-wrapper">
+  <div class="menu-box">
+  <div class="side-menu-list">
+    <div class="menu-items">
+      <li (click)="goTo('home')" [ngClass]="{'onActive': selectedMenu == 'home'}"><i class="fa fa-home"></i>Pulpit</li>
+      <li (click)="goTo('orders')" [ngClass]="{'onActive': selectedMenu == 'orders'}"><i class="fa fa-home"></i>Zamówienia</li>
+      <li (click)="goTo('contractors')" [ngClass]="{'onActive': selectedMenu == 'contractors'}"><i class="fa fa-home"></i>Kontrahenci</li>
+      <li (click)="goTo('workers')" [ngClass]="{'onActive': selectedMenu == 'workers'}"><i class="fa fa-home"></i>Pracownicy</li>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="content-wrapper">
+  <router-outlet></router-outlet>
+</div>
+</div>
