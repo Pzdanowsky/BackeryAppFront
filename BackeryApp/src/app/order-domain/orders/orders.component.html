@@ -6,43 +6,47 @@
       <input class="form-control" type="text" name="contractorSearch" [(ngModel)]="contractorSearchName"
        (ngModelChange)="searchContractor()" placeholder="Kontrahent">
 
-      <button>DZIŚ</button>
-      <button>WCZORAJ</button>
+      <button (click)="searchTodayOrders()">DZIŚ</button>
+      <button (click)="searchYesteradyOrders()">WCZORAJ</button>
 
       <label for="start">Start date:</label>
       <input type="date" id="start-date" name="trip-start"
-       value="2022-07-22"
+
        min="2022-01-01"
-       [(ngModel)]="date_start"
+       [(ngModel)]="startDate"
         (ngModelChange)="searchStartDate()"
        >
 
        <label for="start">Stop date:</label>
 
 <input type="date" id="stop-date" name="trip-stop"
-       value="2021-07-22"
-       min="2022-01-01" >
+       [(ngModel)]="stopDate"
+       min="2022-01-01"
+       (ngModelChange)="searchStopDate()">
     </div>
-<table class="table-class">
+
+
+<table class="table-class col-xs-7 table-bordered table-striped table-condensed table-fixed">
   <thead>
     <tr>
-      <th *ngFor="let column of columnsName" (click)="sortBy('item')">
+      <th *ngFor="let column of columnsName" (click)="sortBy('item')" class="col">
         {{column}}<i class="fa fa-sort"></i>
       </th>
 
     </tr>
   </thead>
+  <tbody>
   <tr *ngFor="let order of orderList | orderBy: key: reverse">
-    <td>{{order.order_id}}</td>
-    <td>{{order.order_date}}</td>
-    <td>{{order.order_ondate}}</td>
-    <td>{{order.contractor}}</td>
-    <td>{{order.ammountPaid}}</td>
-    <td>{{order.status}}</td>
-    <td><button>Szczegóły</button></td>
+    <td class="col">{{order.order_id}}</td>
+    <td class="col">{{order.order_date}}</td>
+    <td class="col">{{order.order_ondate}}</td>
+    <td class="col">{{order.contractor}}</td>
+    <td class="col">{{order.ammountPaid}}</td>
+    <td class="col">{{order.status}}</td>
+    <td class="col"><button>Szczegóły</button></td>
   </tr>
 
-
+</tbody>
 </table>
 
 </div>

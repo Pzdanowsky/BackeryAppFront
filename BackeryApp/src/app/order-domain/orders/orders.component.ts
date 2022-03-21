@@ -1,25 +1,30 @@
 import { Orders } from './../Orders-model';
 import { RestService } from './../../server-service/rest.service';
 import { Component, OnInit } from '@angular/core';
+import { DatePipe } from '@angular/common';
 
 
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',
-  styleUrls: ['./orders.component.css']
+  styleUrls: ['./orders.component.css'],
+  providers: [DatePipe]
 })
 export class OrdersComponent implements OnInit {
 
   columnsName = ['Nr. zamowienia','Data zamowienia','Data realizacji','Kontrahent','Wartość','Status'];
   index = ['order_id','order_date','order_ondate','contractor','ammountPaid','status'];
-
+  searchOrderList : Orders[] = [];
   orderList : Orders[] = [];
   contractorSearchName: any;
-  date_start!: Date;
+  startDate = "2022-21-03";
+  stopDate = "2-22-21-03"
   key = 'id';
   reverse: boolean = false;
 
-  constructor(private restApi: RestService) {}
+  constructor(private restApi: RestService) {
+
+  }
 
   ngOnInit(): void {
     this.restApi.getOrders().subscribe
@@ -36,6 +41,7 @@ export class OrdersComponent implements OnInit {
   }
 
   searchContractor(){
+
     if(this.contractorSearchName ==""){
       this.ngOnInit();
     }else{
@@ -48,10 +54,26 @@ export class OrdersComponent implements OnInit {
   searchStartDate(){
 
     this.orderList = this.orderList.filter(res=>{
-      let temp = new Date(res.order_date)
-      let start = new Date(this.date_start)
-      return temp.getTime() >= start.getTime();
+      let temp_start = new Date(res.order_date)
+      let start = new Date(this.startDate)
+      return temp_start.getTime() >= start.getTime();
     })
+  }
+
+  searchStopDate(){
+    this.orderList = this.orderList.filter(res =>{
+      let temp_stop = new Date(res.order_date)
+      let stop = new Date(this.stopDate)
+      return temp_stop.getTime() <= stop.getTime();
+    })
+  }
+
+  searchTodayOrders(){
+
+  }
+
+  searchYesteradyOrders(){
+
   }
 
 
