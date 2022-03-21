@@ -12,8 +12,7 @@ import { DatePipe } from '@angular/common';
 })
 export class OrdersComponent implements OnInit {
 
-  columnsName = ['Nr. zamowienia','Data zamowienia','Data realizacji','Kontrahent','Wartość','Status'];
-  index = ['order_id','order_date','order_ondate','contractor','ammountPaid','status'];
+  columnsName = ['Nr. zamowienia','Data zamowienia','Data realizacji','Kontrahent','Wartość','Status','Szczegóły'];
   searchOrderList : Orders[] = [];
   orderList : Orders[] = [];
   contractorSearchName: any;

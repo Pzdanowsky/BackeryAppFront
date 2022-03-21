@@ -1,7 +1,7 @@
 <div class="orders-container">
 
 
-  <div class="table-wrapper">
+<div class="wrapper">
     <div class="features-bar">
       <input class="form-control" type="text" name="contractorSearch" [(ngModel)]="contractorSearchName"
        (ngModelChange)="searchContractor()" placeholder="Kontrahent">
@@ -25,29 +25,33 @@
        (ngModelChange)="searchStopDate()">
     </div>
 
-
-<table class="table-class col-xs-7 table-bordered table-striped table-condensed table-fixed">
+    <div class="table-wrapper">
+<table class="table-class">
   <thead>
     <tr>
-      <th *ngFor="let column of columnsName" (click)="sortBy('item')" class="col">
-        {{column}}<i class="fa fa-sort"></i>
-      </th>
-
+      <th class="col_nr" (click)="sortBy('order_id')" >Nr.</th>
+      <th (click)="sortBy('order_date')" class="col_date">Data zamówienia<i class="fa fa-sort"></i></th>
+      <th (click)="sortBy('order_ondate')" class="col_date">Data realizacji<i class="fa fa-sort"></i></th>
+      <th (click)="sortBy('contractor')" class="col_contractor">Kontrahent<i class="fa fa-sort"></i></th>
+      <th (click)="sortBy('ammountPaid')" class="col_other">Wartość<i class="fa fa-sort"></i></th>
+      <th (click)="sortBy('item')" class="col_other">Status<i class="fa fa-sort"></i></th>
+      <th class="col1">Szczegóły</th>
     </tr>
   </thead>
   <tbody>
   <tr *ngFor="let order of orderList | orderBy: key: reverse">
-    <td class="col">{{order.order_id}}</td>
-    <td class="col">{{order.order_date}}</td>
-    <td class="col">{{order.order_ondate}}</td>
-    <td class="col">{{order.contractor}}</td>
-    <td class="col">{{order.ammountPaid}}</td>
-    <td class="col">{{order.status}}</td>
-    <td class="col"><button>Szczegóły</button></td>
+    <td class="col_nr">{{order.order_id}}</td>
+    <td class="col_date">{{order.order_date}}</td>
+    <td class="col_date">{{order.order_ondate}}</td>
+    <td class="col_contractor_">{{order.contractor}}</td>
+    <td class="col_other">{{order.ammountPaid}}</td>
+    <td class="col_other">{{order.status}}</td>
+    <td class="col_other"><button>Szczegóły</button></td>
   </tr>
 
 </tbody>
 </table>
 
+</div>
 </div>
 </div>

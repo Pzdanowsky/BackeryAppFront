@@ -1,4 +1,6 @@
-
+.page-container{
+ height: 650px;
+}
 
 .mr-2{
   padding-left: 25px;
@@ -54,6 +56,7 @@ i{
 }
 
 .content-wrapper{
+
   float:left;
 
 }
