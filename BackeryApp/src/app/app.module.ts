@@ -23,7 +23,8 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
     HttpClientModule,
     FormsModule,
     Ng2SearchPipeModule,
-    Ng2OrderModule
+    Ng2OrderModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
