@@ -1,6 +1,7 @@
+import { Contractors } from './../../contractors-domain/Contractors-model';
 import { Orders } from './../Orders-model';
 import { RestService } from './../../server-service/rest.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, ComponentFactoryResolver, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
 
@@ -45,7 +46,9 @@ export class OrdersComponent implements OnInit {
       this.ngOnInit();
     }else{
       this.orderList = this.orderList.filter(res =>{
-      return res.contractor.toLocaleLowerCase().match(this.contractorSearchName.toLocaleLowerCase());
+        let temp = res.contractor.getComapnyName();
+        console.log(temp);
+      return temp.match(this.contractorSearchName.toLocaleLowerCase());
     })
     }
   }

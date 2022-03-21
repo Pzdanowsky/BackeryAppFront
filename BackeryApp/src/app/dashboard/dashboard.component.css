@@ -1,5 +1,8 @@
 .page-container{
  height: 650px;
+ display: flex;
+ flex-wrap: nowrap;
+
 }
 
 .mr-2{
@@ -56,7 +59,7 @@ i{
 }
 
 .content-wrapper{
-
+  flex-shrink: 1;
   float:left;
 
 }
