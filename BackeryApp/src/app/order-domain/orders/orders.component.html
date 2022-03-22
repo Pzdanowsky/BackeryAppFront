@@ -1,49 +1,57 @@
 <div class="orders-container">
 
 
-  <div class="table-wrapper">
+<div class="wrapper">
     <div class="features-bar">
       <input class="form-control" type="text" name="contractorSearch" [(ngModel)]="contractorSearchName"
        (ngModelChange)="searchContractor()" placeholder="Kontrahent">
 
-      <button>DZIŚ</button>
-      <button>WCZORAJ</button>
+      <button (click)="searchTodayOrders()">DZIŚ</button>
+      <button (click)="searchYesteradyOrders()">WCZORAJ</button>
 
       <label for="start">Start date:</label>
       <input type="date" id="start-date" name="trip-start"
-       value="2022-07-22"
+
        min="2022-01-01"
-       [(ngModel)]="date_start"
+       [(ngModel)]="startDate"
         (ngModelChange)="searchStartDate()"
        >
 
        <label for="start">Stop date:</label>
 
 <input type="date" id="stop-date" name="trip-stop"
-       value="2021-07-22"
-       min="2022-01-01" >
+       [(ngModel)]="stopDate"
+       min="2022-01-01"
+       (ngModelChange)="searchStopDate()">
     </div>
+
+    <div class="table-wrapper">
 <table class="table-class">
   <thead>
     <tr>
-      <th *ngFor="let column of columnsName" (click)="sortBy('item')">
-        {{column}}<i class="fa fa-sort"></i>
-      </th>
-
+      <th class="col_nr" (click)="sortBy('order_id')" >Nr.</th>
+      <th (click)="sortBy('order_date')" class="col_date">Data zamówienia<i class="fa fa-sort"></i></th>
+      <th (click)="sortBy('order_ondate')" class="col_date">Data realizacji<i class="fa fa-sort"></i></th>
+      <th (click)="sortBy('contractor')" class="col_contractor">Kontrahent<i class="fa fa-sort"></i></th>
+      <th (click)="sortBy('ammountPaid')" class="col_other">Wartość<i class="fa fa-sort"></i></th>
+      <th (click)="sortBy('item')" class="col_other">Status<i class="fa fa-sort"></i></th>
+      <th class="col1">Szczegóły</th>
     </tr>
   </thead>
+  <tbody>
   <tr *ngFor="let order of orderList | orderBy: key: reverse">
-    <td>{{order.order_id}}</td>
-    <td>{{order.order_date}}</td>
-    <td>{{order.order_ondate}}</td>
-    <td>{{order.contractor}}</td>
-    <td>{{order.ammountPaid}}</td>
-    <td>{{order.status}}</td>
-    <td><button>Szczegóły</button></td>
+    <td class="col_nr">{{order.order_id}}</td>
+    <td class="col_date">{{order.order_date}}</td>
+    <td class="col_date">{{order.order_ondate}}</td>
+    <td class="col_contractor_">{{order.contractor[0].company_name}}</td>
+    <td class="col_other">{{order.ammountPaid}}</td>
+    <td class="col_other">{{order.status}}</td>
+    <td class="col_other"><button>Szczegóły</button></td>
   </tr>
 
-
+</tbody>
 </table>
 
+</div>
 </div>
 </div>

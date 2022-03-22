@@ -1,1 +1,42 @@
-<p>contractors works!</p>
+<div class="contractors-container">
+  <div class="navibar">
+
+
+
+  </div>
+  <div class="table-wrapper">
+    <table class="table-class">
+      <thead>
+        <tr>
+          <th class="col_nr" (click)="sortBy('contractor_id')" >Nr.</th>
+          <th (click)="sortBy('company_name')" class="col_name">Nazwa<i class="fa fa-sort"></i></th>
+          <th class="col_other">NIP</th>
+          <th class="col_other">Telefon</th>
+          <th class="col_other">Adres</th>
+          <th class="col_other">Poczta</th>
+          <th class="col_other">E-mail</th>
+          <th class="col_other">Kraj</th>
+          <th class="col1">Szczegóły</th>
+
+        </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let contractor of contractorList | orderBy: key: reverse">
+        <td class="col_nr">{{contractor.contractor_id}}</td>
+        <td class="col_date">{{contractor.company_name}}</td>
+        <td class="col_date">{{contractor.nip}}</td>
+        <td class="col_contractor_">{{contractor.phone}}</td>
+        <td class="col_other">{{contractor.addres}}</td>
+        <td class="col_other">{{contractor.pcode+' '+ contractor.pcity}}</td>
+        <td class="col_other">{{contractor.email}}</td>
+        <td class="col_other">{{contractor.country}}</td>
+        <td class="col_other"><button>Szczegóły</button></td>
+      </tr>
+
+    </tbody>
+    </table>
+  </div>
+
+
+
+</div>

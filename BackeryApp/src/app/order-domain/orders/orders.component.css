@@ -1,28 +1,122 @@
-.table-class{
-  border-collapse: collapse;
-  margin: 25px ;
-  font-size: 0.9em;
-  width: 100%;
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  -webkit-box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 1);
-  -moz-box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 1);
-  box-shadow: 0px 0px 24px 0px rgba(66, 68, 90, 1);
 
+.wrapper{
+  padding: 0 10%;
+  margin: 40px auto 0;
+}
+
+.orders-container{
+  display: flex;
+  flex-wrap: nowrap;
+  height: 550px;
+  display: grid;
+  justify-content: center;
+  align-items: top;
 
 }
 
 .table-wrapper{
 
-  width: 100%;
-  min-width: 1000px;
-  margin-top: 120px;
-margin-left: 60px;
-margin-right: 30px;
+  max-height: 550px;
+
+  overflow-y: auto;
 
 
 }
 
-.features-bar{
-  margin-top: 30px;
-  padding-left: 20px;
+
+.table-class{
+  flex-shrink: 1;
+width: 100%;
+border-collapse: collapse;
+background-color: white;
 }
+
+.table-class thead{
+
+  text-transform: uppercase;
+
+
+}
+
+.table-class thead tr th{
+
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+  padding: 5px 24px 5px;
+  text-align: center;
+
+}
+
+
+.table-class .col_contractor{
+  width: 350px;
+  text-align: center;
+}
+
+.table-class .col_contractor_{
+  width: 350px;
+  display: inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.table-class .col_nr{
+width: 10px;
+text-align: center;
+}
+
+.table-class .col_other{
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+}
+
+.table-class .col_date{
+  min-width:max-content;
+  width: 200px;
+
+}
+
+
+
+
+th{
+  top: 0px;
+  background-color: #3399ff;
+  position:sticky;
+}
+
+tr:hover{
+  background-color: aliceblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

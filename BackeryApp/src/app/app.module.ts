@@ -5,10 +5,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule, routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ContractorsComponent } from './contractors-domain/contractors/contractors.component';
+
 import { WorkersComponent } from './workers-domain/workers/workers.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { Ng2OrderModule } from 'ng2-order-pipe';
+
 
 
 
@@ -16,6 +17,7 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
   declarations: [
     AppComponent,
     routingComponents,
+
   ],
   imports: [
     BrowserModule,
@@ -23,7 +25,8 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
     HttpClientModule,
     FormsModule,
     Ng2SearchPipeModule,
-    Ng2OrderModule
+    Ng2OrderModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

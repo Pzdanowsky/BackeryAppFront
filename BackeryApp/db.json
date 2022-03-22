@@ -5,7 +5,19 @@
       "order_id": "1",
       "order_date": "2022-03-17",
       "order_ondate": "2022-03-18",
-      "contractor" : "JAMIOŁ",
+      "contractor" : [
+        {
+          "contractor_id": "2",
+          "company_name": "Jamioł",
+          "nip": "1234569871",
+          "phone": "604 000 969",
+          "addres" :" Ociesenki 49A",
+          "pcode": "26-021",
+          "pcity": "Daleszyce",
+          "email":"example@mail.pl",
+          "country":"Polska"
+        }],
+
       "ammountPaid" : "123,23",
       "status" : "Produkcja"
     },
@@ -29,7 +41,19 @@
       "order_id": "4",
       "order_date": "2022-03-15",
       "order_ondate": "2022-03-16",
-      "contractor" : "JAMIOŁ",
+      "contractor": [
+        {
+          "contractor_id": "2",
+          "company_name": "Jamioł",
+          "nip": "1234569871",
+          "phone": "604 000 969",
+          "addres" :" Ociesenki 49A",
+          "pcode": "26-021",
+          "pcity": "Daleszyce",
+          "email":"example@mail.pl",
+          "country":"Polska"
+        }],
+
       "ammountPaid" : "123,23",
       "status" : "Wydane"
     },
@@ -45,10 +69,295 @@
       "order_id": "6",
       "order_date": "2022-03-15",
       "order_ondate": "2022-03-16",
-      "contractor" : "ŻABKA",
+      "contractor" :[
+         {
+        "contractor_id": "1",
+        "company_name": "Żabka",
+        "nip": "1234567891",
+        "phone": "604 633 969",
+        "addres" :" Borków 48B",
+        "pcode": "26-021",
+        "pcity": "Daleszyce",
+        "email":"example@mail.pl",
+        "country":"Polska"
+      }
+    ],
+      "ammountPaid" : "283,23",
+      "status" : "Wydane"
+    },
+    {
+      "order_id": "7",
+      "order_date": "2022-03-20",
+      "order_ondate": "2022-03-21",
+      "contractor" :[
+      {
+        "contractor_id": "1",
+        "company_name": "Żabka",
+        "nip": "1234567891",
+        "phone": "604 633 969",
+        "addres" :" Borków 48B",
+        "pcode": "26-021",
+        "pcity": "Daleszyce",
+        "email":"example@mail.pl",
+        "country":"Polska"
+      }
+      ],
+      "ammountPaid" : "283,23",
+      "status" : "Wydane"
+    },
+    {
+      "order_id": "8",
+      "order_date": "2022-03-21",
+      "order_ondate": "2022-03-22",
+      "contractor" : "SKLEP 1",
+      "ammountPaid" : "283,23",
+      "status" : "Wydane"
+    },
+    {
+      "order_id": "9",
+      "order_date": "2022-03-19",
+      "order_ondate": "2022-03-20",
+      "contractor" :[
+       {
+        "contractor_id": "1",
+        "company_name": "Żabka",
+        "nip": "1234567891",
+        "phone": "604 633 969",
+        "addres" :" Borków 48B",
+        "pcode": "26-021",
+        "pcity": "Daleszyce",
+        "email":"example@mail.pl",
+        "country":"Polska"
+      }
+    ],
+      "ammountPaid" : "283,23",
+      "status" : "Wydane"
+    },
+    {
+      "order_id": "1",
+      "order_date": "2022-03-17",
+      "order_ondate": "2022-03-18",
+      "contractor" :[
+       {
+        "contractor_id": "2",
+        "company_name": "Jamioł",
+        "nip": "1234569871",
+        "phone": "604 000 969",
+        "addres" :" Ociesenki 49A",
+        "pcode": "26-021",
+        "pcity": "Daleszyce",
+        "email":"example@mail.pl",
+        "country":"Polska"
+      }
+      ],
+      "ammountPaid" : "123,23",
+      "status" : "Produkcja"
+    },
+    {
+      "order_id": "2",
+      "order_date": "2022-03-17",
+      "order_ondate": "2022-03-18",
+      "contractor" : "SKLEP",
+      "ammountPaid" : "223,23",
+      "status" : "Produkcja"
+    },
+    {
+      "order_id": "3",
+      "order_date": "2022-03-17",
+      "order_ondate": "2022-03-18",
+      "contractor"  :[
+        {
+        "contractor_id": "1",
+        "company_name": "Żabka",
+        "nip": "1234567891",
+        "phone": "604 633 969",
+        "addres" :" Borków 48B",
+        "pcode": "26-021",
+        "pcity": "Daleszyce",
+        "email":"example@mail.pl",
+        "country":"Polska"
+      }
+    ],
+      "ammountPaid" : "283,23",
+      "status" : "Produkcja"
+    },
+    {
+      "order_id": "4",
+      "order_date": "2022-03-15",
+      "order_ondate": "2022-03-16",
+      "contractor" :[{
+        "contractor_id": "2",
+        "company_name": "Jamioł",
+        "nip": "1234569871",
+        "phone": "604 000 969",
+        "addres" :" Ociesenki 49A",
+        "pcode": "26-021",
+        "pcity": "Daleszyce",
+        "email":"example@mail.pl",
+        "country":"Polska"
+      }
+    ],
+      "ammountPaid" : "123,23",
+      "status" : "Wydane"
+    },
+    {
+      "order_id": "5",
+      "order_date": "2022-03-15",
+      "order_ondate": "2022-03-16",
+      "contractor" : "SKLEP",
+      "ammountPaid" : "223,23",
+      "status" : "Wydane"
+    },
+    {
+      "order_id": "6",
+      "order_date": "2022-03-15",
+      "order_ondate": "2022-03-16",
+      "contractor"  :[{
+        "contractor_id": "1",
+        "company_name": "Żabka",
+        "nip": "1234567891",
+        "phone": "604 633 969",
+        "addres" :" Borków 48B",
+        "pcode": "26-021",
+        "pcity": "Daleszyce",
+        "email":"example@mail.pl",
+        "country":"Polska"
+      }],
+      "ammountPaid" : "283,23",
+      "status" : "Wydane"
+    },
+    {
+      "order_id": "7",
+      "order_date": "2022-03-20",
+      "order_ondate": "2022-03-21",
+      "contractor" : "ŻABKA SPÓŁKA ZŁO I TEREFERE PRZYJACIELEAAAAAAAAAA333",
+      "ammountPaid" : "283,23",
+      "status" : "Wydane"
+    },
+    {
+      "order_id": "8",
+      "order_date": "2022-03-21",
+      "order_ondate": "2022-03-22",
+      "contractor" : "SKLEP 1",
+      "ammountPaid" : "283,23",
+      "status" : "Wydane"
+    },
+    {
+      "order_id": "9",
+      "order_date": "2022-03-19",
+      "order_ondate": "2022-03-20",
+      "contractor" : [ {
+        "contractor_id": "1",
+        "company_name": "Żabka",
+        "nip": "1234567891",
+        "phone": "604 633 969",
+        "addres" :" Borków 48B",
+        "pcode": "26-021",
+        "pcity": "Daleszyce",
+        "email":"example@mail.pl",
+        "country":"Polska"
+      }],
+      "ammountPaid" : "283,23",
+      "status" : "Wydane"
+    },
+    {
+      "order_id": "5",
+      "order_date": "2022-03-15",
+      "order_ondate": "2022-03-16",
+      "contractor" : "SKLEP",
+      "ammountPaid" : "223,23",
+      "status" : "Wydane"
+    },
+    {
+      "order_id": "6",
+      "order_date": "2022-03-15",
+      "order_ondate": "2022-03-16",
+      "contractor" :[ {
+        "contractor_id": "1",
+        "company_name": "Żabka",
+        "nip": "1234567891",
+        "phone": "604 633 969",
+        "addres" :" Borków 48B",
+        "pcode": "26-021",
+        "pcity": "Daleszyce",
+        "email":"example@mail.pl",
+        "country":"Polska"
+      }],
+      "ammountPaid" : "283,23",
+      "status" : "Wydane"
+    },
+    {
+      "order_id": "7",
+      "order_date": "2022-03-20",
+      "order_ondate": "2022-03-21",
+      "contractor" : "ŻABKA SPÓŁKA ZŁO I TEREFERE PRZYJACIELEAAAAAAAAAA333",
+      "ammountPaid" : "283,23",
+      "status" : "Wydane"
+    },
+    {
+      "order_id": "8",
+      "order_date": "2022-03-21",
+      "order_ondate": "2022-03-22",
+      "contractor" : "SKLEP 1",
+      "ammountPaid" : "283,23",
+      "status" : "Wydane"
+    },
+    {
+      "order_id": "9",
+      "order_date": "2022-03-19",
+      "order_ondate": "2022-03-20",
+      "contractor":[ {
+        "contractor_id": "1",
+        "company_name": "Żabka",
+        "nip": "1234567891",
+        "phone": "604 633 969",
+        "addres" :" Borków 48B",
+        "pcode": "26-021",
+        "pcity": "Daleszyce",
+        "email":"example@mail.pl",
+        "country":"Polska"
+      }],
       "ammountPaid" : "283,23",
       "status" : "Wydane"
     }
+  ],
+
+  "Contractors":[
+    {
+      "contractor_id": "1",
+      "company_name": "Żabka",
+      "nip": "1234567891",
+      "phone": "604 633 969",
+      "addres" :" Borków 48B",
+      "pcode": "26-021",
+      "pcity": "Daleszyce",
+      "email":"example@mail.pl",
+      "country":"Polska"
+    },
+    {
+      "contractor_id": "2",
+      "company_name": "Jamioł",
+      "nip": "1234569871",
+      "phone": "604 000 969",
+      "addres" :" Ociesenki 49A",
+      "pcode": "26-021",
+      "pcity": "Daleszyce",
+      "email":"example@mail.pl",
+      "country":"Polska"
+    },
+    {
+      "contractor_id": "3",
+      "company_name": "Delikatesy Centrum Sp.z.o.o.",
+      "nip": "0987654321",
+      "phone": "123098567",
+      "addres" :"Alenkowice 34A",
+      "pcode": "12-345",
+      "pcity": "Włoszczowa",
+      "email":"example@asa.pl",
+      "country":"Polska"
+    }
+
+
   ]
 
 
