@@ -16,6 +16,7 @@ export class ContractorsComponent implements OnInit {
 
   constructor(private restApi: RestService) { }
 
+
   ngOnInit(): void {
     this.restApi.getContractors().subscribe
     (
@@ -32,6 +33,7 @@ export class ContractorsComponent implements OnInit {
 
 
   sortBy(key:any){
+    this.key = key;
 
   }
 
